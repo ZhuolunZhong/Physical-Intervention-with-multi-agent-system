@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+    
+  #app {
+    margin: 0 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    height: 600px;
+    width: 600px;
+  }
+  #agent {
+    background-color: blue;
+  }
+
+  .pelletImg{
+    width: '100%';
+    height: '100%';
+    object-fit: 'fill';
+    position: 'absolute';
+    z-index: '4';
+    
+  }
+
+  .parameter-form-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: transparent; 
+    border: none; 
+    overflow-y: auto;
+    z-index: 1000;
+    padding: 10px;
+    box-shadow: none; 
+  }
+  
+  .parameter-form-container button {
+    width: 100%;
+  }
+  
+  .confirm-dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; 
+    z-index: 1000; 
+  }
+  
+  .confirm-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 1001; 
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .confirm-dialog p {
+    white-space: pre-wrap; /* 让 \n 换行生效 */
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
