@@ -1,4 +1,12 @@
-# npm start  <- use this in terminal to install packages
+# Getting started
+You need to have node.js installed on your system to run the code. Follow these [instructions](https://nodejs.org/en/download).
+
+You may also need to run  `npm install react-scripts --save-dev`
+
+run `npm install` in the main directory to install needed packages
+
+`npm start`  <- use this in terminal to start after install
+
 # Open src/utils/index.tsx to set parameters. 
 ## Max number of agents is 3.
 ## Change PELLET_MODE to 1 to use PELLET_PATCH_MEAN2 and PELLET_PATCH_VAR2
