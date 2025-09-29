@@ -289,10 +289,10 @@ const Agent: FC<AgentParamType> = ({ myPos, id, myId, color, dispatch, myAgent }
     // Add or remove mouse move and mouse up event listeners based on drag state
     useEffect(() => {
         if (dragP) {
-            //window.addEventListener('mousemove', handleMouseMove); // Add mouse move listener
+            window.addEventListener('mousemove', handleMouseMove); // Add mouse move listener
             window.addEventListener('mouseup', handleMouseUp); // Add mouse up listener
         } else {
-            //window.removeEventListener('mousemove', handleMouseMove); // Remove mouse move listener
+            window.removeEventListener('mousemove', handleMouseMove); // Remove mouse move listener
             window.removeEventListener('mouseup', handleMouseUp); // Remove mouse up listener
         }
         setMouseHelps(mouseHelps => ({
