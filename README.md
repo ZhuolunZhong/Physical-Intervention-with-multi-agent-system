@@ -1,3 +1,4 @@
+# npm start  <- use this in terminal to install packages
 # Open src/utils/index.tsx to set parameters. 
 ## Max number of agents is 3.
 ## Change PELLET_MODE to 1 to use PELLET_PATCH_MEAN2 and PELLET_PATCH_VAR2
