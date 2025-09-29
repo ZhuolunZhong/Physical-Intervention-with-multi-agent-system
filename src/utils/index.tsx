@@ -40,7 +40,7 @@ const agentTypeMapping: { [key: string]: typeof QLearnAgent | typeof QLearnAgent
   'QLearnAgent2': QLearnAgent2
 };
 
-const storedAgentTypes = getSessionStorageParam<string[]>('agentTypes', ['QLearnAgent2', 'QLearnAgent2']);
+const storedAgentTypes = getSessionStorageParam<string[]>('agentTypes', ['QLearnAgent2', 'QLearnAgent2','QLearnAgent2']);
 export const agentTypes = storedAgentTypes.map(type => agentTypeMapping[type as keyof typeof agentTypeMapping]);
 
 export const dragAllowed = [true, true, true];
