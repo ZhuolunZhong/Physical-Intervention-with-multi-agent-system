@@ -51,6 +51,7 @@ run `npm install` in the main directory to install needed packages
 * *Impede*: This interpretation punishes the agent's original chosen action, framing the intervention as a consequence of a poor decision. The agent uses a fixed negative reward to learn from its original state-action sequence.
     * *Learning Rule*: Use $(s_t, a_t, s^A_{t+1}, -2R_{\text{pellet}})$ for Q-update.
 
+Builds on [Ho et al 2017](https://escholarship.org/content/qt8z48f0ms/qt8z48f0ms.pdf)
+
 ## PELLET_TILES -> Spawn tiles
 
-Builds on [Ho et al 2017](https://escholarship.org/content/qt8z48f0ms/qt8z48f0ms.pdf)
