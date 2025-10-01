@@ -31,7 +31,6 @@ export const INTERPRET_TYPE = (() => {
     return candidates[index];
 })();
 
-console.log("d",INTERPRET_TYPE)
 export const PELLET_TILES = getSessionStorageParam<number[][]>(
   'PELLET_TILES', 
   [[0, 1], [7, 0], [3, 1], [1, 4], [7, 4], [2, 0], [7, 7], [7, 3], [4, 0], [2, 7], [4, 1], [4, 3], [4, 7]]
