@@ -21,15 +21,17 @@ export const HUM_INT_FB = getSessionStorageParam<number>('HUM_INT_FB', -12);
 export const PELLET_FEEDBACK = getSessionStorageParam<number>('PELLET_FEEDBACK', 6);
 export const INTERPRET_TYPE = (() => {
     const username = Number(sessionStorage.getItem("userID")); // Convert username to an integer
-    if (isNaN(username)) {
+    if (username === 0) {
         console.error("Invalid username. Cannot determine INTERPRET_TYPE.");
-        return 0; // Default to 0 if username is invalid
+        return 5; // Default to 0 if username is invalid
     }
 
     const candidates = [0, 1, 2, 3, 4, 5]; // Candidate values for INTERPRET_TYPE
-    const index = (username ) % candidates.length; // Determine the index in the candidates array
+    const index = (username - 1) % candidates.length; // Determine the index in the candidates array
     return candidates[index];
 })();
+
+console.log("d",INTERPRET_TYPE)
 export const PELLET_TILES = getSessionStorageParam<number[][]>(
   'PELLET_TILES', 
   [[0, 1], [7, 0], [3, 1], [1, 4], [7, 4], [2, 0], [7, 7], [7, 3], [4, 0], [2, 7], [4, 1], [4, 3], [4, 7]]
