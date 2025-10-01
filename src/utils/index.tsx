@@ -11,7 +11,7 @@ import { getSessionStorageParam } from './parameters';
 export const NUM_AGENTS = getSessionStorageParam<number>('NUM_AGENTS', 1);
 export const PELLET_PATCH_MEAN2 = getSessionStorageParam<number[][]>('PELLET_PATCH_MEAN2', [[3, 3], [3, 3]]);
 export const PELLET_PATCH_VAR2 = getSessionStorageParam<number[][]>('PELLET_PATCH_VAR2', [[0.75, 0.75], [0.75, 0.75]]);
-export const EXPECTED_PELLET_TIME = getSessionStorageParam<number>('EXPECTED_PELLET_TIME', 400);
+export const EXPECTED_PELLET_TIME = getSessionStorageParam<number>('EXPECTED_PELLET_TIME', 100);
 export const AGENT_EPS = getSessionStorageParam<number>('AGENT_EPS', 0.3);
 export const TEACH_EPS = getSessionStorageParam<number>('TEACH_EPS', 1);
 export const MOVE_TIME = getSessionStorageParam<number>('MOVE_TIME', 2);
@@ -30,12 +30,10 @@ export const INTERPRET_TYPE = (() => {
     const index = (username - 1) % candidates.length; // Determine the index in the candidates array
     return candidates[index];
 })();
-
 export const PELLET_TILES = getSessionStorageParam<number[][]>(
   'PELLET_TILES', 
-  [[2,2], [6,6]]
+  [[0, 1], [7, 0], [3, 1], [1, 4], [7, 4], [2, 0], [7, 7], [7, 3], [4, 0], [2, 7], [4, 1], [4, 3], [4, 7]]
 );
-export const PELLET_TILE_PROPS = getSessionStorageParam<number[]>('PELLET_TILE_PROP', [0.3, 0.70]);
 
 const agentTypeMapping: { [key: string]: typeof QLearnAgent | typeof QLearnAgent2 } = {
   'QLearnAgent': QLearnAgent,
@@ -121,10 +119,9 @@ export const myWorld = [
     [0,1,1,1,1,1,1,0],
 ]
 
-//hard initialzie position to topleft corner
 export const agentStSqs = Array.from({ length: NUM_AGENTS }, () => ({
-    x: 0,
-    y: 0,
+    x: Math.floor(Math.random() * GRID_W),
+    y: Math.floor(Math.random() * GRID_H),
   }));
 
 export const agentColors = [

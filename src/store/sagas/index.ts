@@ -7,7 +7,7 @@ import { agentSelfActionOverT, BOX_H, BOX_W,
         EXPECTED_PELLET_TIME, IGlobalState,
         GRID_H, GRID_W,
         IObjCoord, MAX_STEP_SIZE, RFH_TIME,WAIT_TIME, REL_PELLET_SIZE, PELLET_MODE, PELLET_PATCH_MEAN2, PELLET_PATCH_VAR2,
-         retCorPos, calcDist, ROUND_EPS, IQvalue, PELLET_TILES,PELLET_TILE_PROPS } from "../../utils";
+         retCorPos, calcDist, ROUND_EPS, IQvalue, PELLET_TILES } from "../../utils";
 
 import { makeSmallSelfMove, MoveArgs, createEndSelfMove, SelfMoveArgs,
      SAGA_END_SELF_MOVE, sagaMoveEndBlocking, makeAfterMouseMoveCancelTaskNameOnly,
@@ -289,18 +289,7 @@ Generator<PutEffect|CallEffect>
                 break;
             case 2:
                 const pelletTiles = PELLET_TILES;
-                const pelletTileProps = PELLET_TILE_PROPS;
-                const randVal = Math.random();
-                let cumProb = 0;
-                let selectedTile: number[] = pelletTiles[0];
-                for (let i=0; i<pelletTileProps.length; i++) {
-                    cumProb += pelletTileProps[i];
-                    if (randVal <= cumProb) {
-                        selectedTile = pelletTiles[i];
-                        break;
-                    }
-                }
-//                const selectedTile = pelletTiles[Math.floor(Math.random() * pelletTiles.length)];
+                const selectedTile = pelletTiles[Math.floor(Math.random() * pelletTiles.length)];
                 xPos = selectedTile[0] + Math.random()* (1 - REL_PELLET_SIZE); 
                 yPos = selectedTile[1] + Math.random()* (1 - REL_PELLET_SIZE);
                 break;
