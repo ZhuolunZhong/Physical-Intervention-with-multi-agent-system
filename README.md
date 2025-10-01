@@ -25,8 +25,6 @@ run `npm install` in the main directory to install needed packages
     DISRUPT,
     IMPEDE
 }
-
-
 ## Interpretation type explanation
 * *Suggestion*: This interpretation treats the intervention as a suggestion for the new tile. The agent learns from the state-action sequence connected to the new tile, ignoring its own intended action, and uses the actual reward from the new tile.
     * *Learning Rule*: Use $(s_t, a^I, s^I_{t+1}, r^I)$ for Q-update.
