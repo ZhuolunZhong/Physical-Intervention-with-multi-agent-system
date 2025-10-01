@@ -27,7 +27,7 @@ export const INTERPRET_TYPE = (() => {
     }
 
     const candidates = [0, 1, 2, 3, 4, 5]; // Candidate values for INTERPRET_TYPE
-    const index = (username - 1) % candidates.length; // Determine the index in the candidates array
+    const index = (username ) % candidates.length; // Determine the index in the candidates array
     return candidates[index];
 })();
 export const PELLET_TILES = getSessionStorageParam<number[][]>(
