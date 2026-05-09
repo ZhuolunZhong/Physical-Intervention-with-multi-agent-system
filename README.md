@@ -6,9 +6,11 @@ You may also need to run  `npm install react-scripts --save-dev`
 run `npm install` in the main directory to install needed packages
 
 `npm start`  <- use this in terminal to start after install
-
+# The human_cogsci26 folder contains the data, code, result charts, etc., used for analysis.
+# The parameters.csv contains parameters used for experiment rounds.
 # Open src/utils/index.tsx to set parameters. 
 ## Max number of agents is 3.
+## PELLET_TILES -> Spawn tiles
 ## Change PELLET_MODE to 1 to use PELLET_PATCH_MEAN2 and PELLET_PATCH_VAR2
 ## EXPECTED_PELLET_TIME control the pellet generation rate
 ## AGENT_EPS -> Exploration rate
@@ -51,5 +53,4 @@ run `npm install` in the main directory to install needed packages
 
 Builds on [Ho et al 2017](https://escholarship.org/content/qt8z48f0ms/qt8z48f0ms.pdf)
 
-## PELLET_TILES -> Spawn tiles
 
