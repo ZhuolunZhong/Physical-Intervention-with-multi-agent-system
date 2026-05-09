@@ -8,10 +8,10 @@ import QLearnAgent2 from "../Roombas/QLearningAgent2";
 import { getSessionStorageParam } from './parameters';
 
 //Parameters
-export const NUM_AGENTS = getSessionStorageParam<number>('NUM_AGENTS', 1);
+export const NUM_AGENTS = getSessionStorageParam<number>('NUM_AGENTS', 2);
 export const PELLET_PATCH_MEAN2 = getSessionStorageParam<number[][]>('PELLET_PATCH_MEAN2', [[3, 3], [3, 3]]);
 export const PELLET_PATCH_VAR2 = getSessionStorageParam<number[][]>('PELLET_PATCH_VAR2', [[0.75, 0.75], [0.75, 0.75]]);
-export const EXPECTED_PELLET_TIME = getSessionStorageParam<number>('EXPECTED_PELLET_TIME', 100);
+export const EXPECTED_PELLET_TIME = getSessionStorageParam<number>('EXPECTED_PELLET_TIME', 500);
 export const AGENT_EPS = getSessionStorageParam<number>('AGENT_EPS', 0.3);
 export const TEACH_EPS = getSessionStorageParam<number>('TEACH_EPS', 1);
 export const MOVE_TIME = getSessionStorageParam<number>('MOVE_TIME', 2);

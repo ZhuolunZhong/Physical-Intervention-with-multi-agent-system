@@ -1,0 +1,12 @@
+"user_id","has_robot_vacuum","satisfaction","gender","race","age"
+"2",0,0,"male","white",30
+"5",0,0,"female","white",46
+"4",0,0,"female","white",58
+"3",0,0,"female","asian",27
+"8",1,6,"male","white",64
+"6",1,3,"male","white",38
+"7",0,0,"female","white",43
+"9",0,0,"female","white",35
+"11",1,4,"male","white",34
+"12",1,7,"male","white",33
+"14",0,0,"male","white",45

@@ -1,0 +1,17 @@
+Grid size: 8x8, Number of pellet tiles: 13  
+Total interventions: 1224  
+  
+H1: λ = 0.033 | Log-likelihood = -5087.8  
+H2: λ = 0.036 | Log-likelihood = -5059.7  
+H3: λ = 0.177 | Log-likelihood = -4899.2  
+
+Best-fitting hypothesis: H3 (highest likelihood)  
+
+Grid size: 8x8, Number of pellet tiles: 18  
+Total interventions: 1228  
+  
+H1: λ = 0.000 | Log-likelihood = -5107.1  
+H2: λ = 0.040 | Log-likelihood = -5070.2  
+H3: λ = 0.673 | Log-likelihood = -4086.6  
+
+Best-fitting hypothesis: H3 (highest likelihood)

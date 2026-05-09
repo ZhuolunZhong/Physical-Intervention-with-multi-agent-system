@@ -82,7 +82,7 @@ function MainExperimentWithRedux() {
             <Grid />
             <PickQtable />
             {/* <ParameterForm /> */}
-            {/* <Timer /> */}
+            <Timer />
             {Array.from({ length: NUM_AGENTS }, (_, i) => (
                 <Fragment key={i}>
                     <AgentScoreBox myId={i.toString()} />
